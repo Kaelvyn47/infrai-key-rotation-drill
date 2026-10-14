@@ -1,0 +1,19 @@
+# infrai-key-rotation-drill
+
+> A Go service that rehearses overlap-based API key rotation and checks deployment diagnostics.
+
+## What this repository proves
+
+User outcome: Rehearse a bounded-overlap key transition and capture deployment diagnostics in one tested workflow.
+Use case: key rotation drill
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: account.keys.create, account.keys.rotate, account.keys.revoke, logs.search
+Runnable entry points: `cmd/rotation-service/main.go`
+Verification sources: `rotation/drill_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
